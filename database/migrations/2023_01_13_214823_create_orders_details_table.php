@@ -19,7 +19,7 @@ return new class extends Migration
             $table->decimal('price',10,2)->nullable();
             $table->decimal('discount',10,2)->nullable();
             $table->integer('order_id')->unsigned();
-            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreign('order_id')->references('id')->on('orders'); /** mina */
             $table->integer('products_color_size_id')->unsigned();
             $table->foreign('products_color_size_id')->references('id')->on('products_color_size');
             $table->timestamps();
